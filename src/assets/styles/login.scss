@@ -54,11 +54,25 @@
   background: rgba(0, 0, 0, 0.1);
 }
 
+.logo-row {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 100px;
+    height: min-content;
+  }
+}
+
 .login-logo {
   img {
-    min-height: 80px;
-    margin-bottom: 40px;
+    // min-height: 80px;
+    margin-bottom: 10px;
     min-width: 99px;
+    max-width: 250px;
   }
 }
 .file {
@@ -142,7 +156,7 @@
   }
   .login-logo {
     img {
-      max-height: 50px;
+      // max-height: 99px;
       margin-bottom: 20px;
     }
   }
