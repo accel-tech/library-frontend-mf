@@ -99,6 +99,8 @@ button:focus {
 }
 
 .topbar-nav-right {
+  border-left: 1px solid $light-gray;
+  
   li {
     color       : $gray;
     cursor      : pointer;

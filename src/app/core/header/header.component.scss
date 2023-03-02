@@ -5,11 +5,11 @@
 .nav-link {
   cursor: pointer;
 }
-.nav-item:hover {
+.clickable-nav-item:hover {
   background-color: #e7e7e7;
 }
 
-.nav-item:active {
+.clickable-nav-item:active {
   background-color: #d5d5d5;
 }
 
@@ -112,6 +112,11 @@
       font-weight: 600;
     }
   }
+}
+
+.gap-x-2 {
+  display: flex;
+  column-gap: 5px;
 }
 .dropdown-toggle::after {
   display: none;

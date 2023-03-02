@@ -9,14 +9,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="list-unstyled topbar-nav ml-auto topbar-nav-right mb-0 float-right hide-when-toogle">
-        <li class="nav-item dropdown">
-          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-            <img class="contry-flag rounded" src="{{ language.flag }}" alt="language" /> {{ language.name }}
+        <li class="clickable-nav-item nav-item dropdown">
+          <a href="#" class="dropdown-toggle nav-link gap-x-2" data-toggle="dropdown">
+            <img class="contry-flag rounded" src="{{ language.flag }}" alt="language" /> <span>{{ language.name }}</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <ng-container *ngFor="let language of languages">
               <li role="button" class="dropdown-item" (click)="setNewLanguageRefresh(language.lang)">
-                <img class="contry-flag mr-1 mb-2 rounded" src="{{ language.flag }}"> {{ language.name }}
+                <img class="contry-flag mr-1 mb-2 rounded" src="{{ language.flag }}"> <span>{{ language.name }}</span>
               </li>
             </ng-container>
           </ul>
@@ -29,7 +29,7 @@
             {{appUserAuth.firstName}} {{appUserAuth.lastName}}
           </a>
         </li>
-        <li class="nav-item notification">
+        <li class="clickable-nav-item nav-item notification">
           <a class="nav-link cursor-pointer">
             <span class="mb-0 dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
@@ -91,13 +91,13 @@
             </ul>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="clickable-nav-item nav-item">
           <a class="nav-link cursor-pointer" (click)="onMyProfile()">
             <span class="left-fa-icon"><i class="la la-id-card fs-19"></i></span>
             <span class="mb-0 ">{{'MY_PROFILE' | translate}}</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="clickable-nav-item nav-item">
           <a class="nav-link" (click)="onLogout()">
             <span class="left-fa-icon"><i class="la la-sign-out-alt fs-19"></i></span><span class="mb-0 ">{{'LOGOUT' |
               translate}}</span>
