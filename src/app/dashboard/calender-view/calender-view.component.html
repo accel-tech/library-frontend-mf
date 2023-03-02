@@ -7,7 +7,7 @@
 </div>
 <div class="row text-center">
   <div class="col-md-4">
-    <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+    <h3 class="capitalize">{{ viewDate | calendarDate:(view + 'ViewTitle'):'fr' }}</h3>
   </div>
   <div class="col-md-4">
     <div class="btn-group">
@@ -27,9 +27,10 @@
   </div>
 </div>
 <br />
-<div [ngSwitch]="view">
+<div [ngSwitch]="view" class="capitalize">
   <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events" [locale]="locale"
     [refresh]="refresh" [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)"
-    (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)">
+    (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)"
+    >
   </mwl-calendar-month-view>
 </div>
