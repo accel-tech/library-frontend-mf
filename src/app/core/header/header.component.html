@@ -2,6 +2,8 @@
   <nav class="navbar navbar-expand-lg navbar-custom">
     <a routerLink="./" class="logo">
       <span><img src="assets/images/logo.png" alt="logo-large" class="logo-lg"></span>
+      <span><img src="assets/images/senegal2.png" alt="logo-large" class="logo-lg"></span>
+      <span><img src="assets/images/mf2.jpeg" alt="logo-large" class="logo-lg"></span>
     </a>
     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,14 +22,6 @@
               </li>
             </ng-container>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link dropdown">
-            <span class="left-fa-icon">
-              <i class="la la-user fs-19"></i>
-            </span>
-            {{appUserAuth.firstName}} {{appUserAuth.lastName}}
-          </a>
         </li>
         <li class="clickable-nav-item nav-item notification">
           <a class="nav-link cursor-pointer">
@@ -57,7 +51,7 @@
                     <div class="col-md-12 row">
                       <div class="col-md-2">
                         <i (click)="viewNotification(notification)"
-                          class="las  text-primary la-eye m-right-10 fs-27 d-block" title="view"></i>
+                          class="las text-primary la-eye m-right-10 fs-27 d-block" title="view"></i>
                         <i (click)="markAsReadNotification(notification.id)"
                           class="las text-success la-check-square fs-27" data-toggle="tooltip" data-placement="bottom"
                           title="Mark as Read"></i>
@@ -93,8 +87,10 @@
         </li>
         <li class="clickable-nav-item nav-item">
           <a class="nav-link cursor-pointer" (click)="onMyProfile()">
-            <span class="left-fa-icon"><i class="la la-id-card fs-19"></i></span>
-            <span class="mb-0 ">{{'MY_PROFILE' | translate}}</span>
+            <span class="left-fa-icon">
+              <i class="la la-user fs-19"></i>
+            </span>
+            {{appUserAuth.firstName}} {{appUserAuth.lastName}}
           </a>
         </li>
         <li class="clickable-nav-item nav-item">
